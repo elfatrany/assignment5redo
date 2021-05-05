@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+body {
+  font-family: Popins, sans-serif;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(./img/bg-intro-desktop.png);
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color:  hsl(0, 100%, 74%);
+  font-weight: 700;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  margin: 3%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 {
+  font-family: Popins, sans-serif;
+  font-size: 48px;
+  line-height: 50px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  font-size: 15px;
+  color: white;
+  font-weight: lighter;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bolder {
+  font-weight: bolder;
+}
+
+p {
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h6 {
+  font-weight: 300;
+  color: rgb(185, 185, 185)
+}
+
+.container {
+  position: relative;
+  width:90%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 90%;
+  margin-top: 100px;
+  overflow: auto;
+}
+
+.main {
+  height: 100%;
+  grid-column-start: 6;
+  grid-column-end: 12;
+    width: 100%;
+  margin: 0 auto;
+}
+
+.mainleft {
+  margin-top: 125px;
+  width: 500px;
+  margin: 0 auto;
+  padding-right: 25px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-items: center;
+}
+
+
+.bannerrow {
+  background-color: hsl(246, 31%, 49%);
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  width: 96%;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.backform {
+  background-color: white;
+  overflow: auto;
+  width: 100%;
+  float:left;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+
+.backform form input {
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 2px solid rgb(235, 235, 235) !important;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.backform form input:after {
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 2px solid rgb(0, 0, 0) !important;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.backform form input::placeholder {
+  padding-left: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  body {
+    font-family: Popins, sans-serif;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./img/bg-intro-mobile.png);
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main {
+      grid-column-start: 1;
+      grid-column-end: 9;
+      text-align: center;
+      justify-self: center;
   }
+  .mainleft {
+      margin: 0 auto;
+      text-align: center;
+      width: 75%;
+      grid-column-start: 1;
+      grid-column-end: 12;
+      justify-self: center;
+  }
+
+  footer {
+      display: flex;
+      justify-content: center;
+      grid-column-start: 1;
+      grid-column-end: 12;
+  }
+
+  nav {
+      grid-column-start: 1;
+      grid-column-end: 12;
+  }
+
+  .social {
+      margin: 0 auto;
+      color: white;
+      padding: 10px;
+      margin: 15px;
+      float: right;
+  }
+}
+
+
+button {
+  background-color: hsl(153, 59%, 51%);
+  border:1px solid hsl(153, 53%, 32%);
+  padding: 15px 45px 15px 45px;
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+  color: white;
+  width: 102%;
+}
+
+
+.social {
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  float: right;
+}
+
+.fab:hover {
+  color: hsl(301, 70%, 71%);
+
+}
+
+.fab {
+  margin: 11px;
+}
+.dot {
+  margin: 15px;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  border: 0.1075em solid #ffffff;
+}
+
+.dot:hover {
+  border-color: hsl(301, 70%, 71%);
 }
